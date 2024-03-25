@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { HeaderComponent } from '../header/header.component';
+import { RouterOutlet } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'brun-layout-main',
   standalone: true,
 	imports: [
-		MatIconModule,
-		MatMenuModule,
-		MatButtonModule,
-		MatToolbarModule
+		HeaderComponent,
+		RouterOutlet,
+		FooterComponent
 	],
   templateUrl: './layout-main.component.html',
   styleUrl: './layout-main.component.scss'
