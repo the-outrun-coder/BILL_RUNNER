@@ -25,6 +25,7 @@ export const routes: Routes = [
 	},
 	{
 		path: 'account', component: AccountComponent, children: [
+			// single account
 			{ path: 'manage', component: ManageComponent }
 		]
 	},
@@ -39,4 +40,5 @@ export const routes: Routes = [
 		]
 	},
 	{ path: 'transaction', component: TransactionComponent },
+	// single trx
 ];
