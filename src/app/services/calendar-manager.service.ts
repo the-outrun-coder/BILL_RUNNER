@@ -4,6 +4,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CalendarManagerService {
+	private today: any; // TODO - SOME DATE OBJECT
 
-  constructor() { }
+	constructor() {
+		this.initializeState();
+	}
+	
+	private initializeState() {
+		this.today = new Date();
+	}
+	
+	public getToday = () => { 
+		return this.today;
+	}
 }

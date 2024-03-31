@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CalendarManagerService } from '../../../services/calendar-manager.service';
 
 @Component({
   selector: 'brun-calendar-grid',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class CalendarGridComponent {
 
+	constructor(private CalManager: CalendarManagerService) { }
+
+	ngOnInit(): void {
+		console.log(`>> TODAY IS: ${this.CalManager.getToday()}`);
+	}
 }
