@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { EventsComponent } from '../../feature/calendar/events/events.component';
+import { EventListComponent } from '../../feature/calendar/event-list/event-list.component';
+
 
 @Component({
   selector: 'app-overview',
   standalone: true,
 	imports: [
-		EventsComponent,
+		EventListComponent,
 		RouterOutlet
 	],
   templateUrl: './overview.component.html',
