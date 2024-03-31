@@ -25,18 +25,20 @@ export const routes: Routes = [
 	},
 	{
 		path: 'account', component: AccountComponent, children: [
-			// single account
+			// TODO - single account
 			{ path: 'manage', component: ManageComponent }
 		]
 	},
 	{
 		path: 'overview', component: OverviewComponent, children: [
 			{ path: 'month', component: MonthlyPlannerComponent },
+			//TODO - Match MONTH 
 			{
 				path: 'year', component: YearlyPlannerComponent, children: [
 				{ path: 'month', component: MonthlyPlannerComponent },
 				]
 			},
+			// TODO - MATCH YEAR, MATCH YEAR & MONTH
 		]
 	},
 	{ path: 'transaction', component: TransactionComponent },
