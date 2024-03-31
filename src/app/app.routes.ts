@@ -10,8 +10,8 @@ import { AccountComponent } from './routes/account/account.component';
 import { ManageComponent } from './routes/account/manage/manage.component';
 //
 import { OverviewComponent } from './routes/overview/overview.component';
-import { YearTableComponent } from './routes/overview/year-table/year-table.component';
-import { MonthTableComponent } from './routes/overview/month-table/month-table.component';
+import { MonthlyPlannerComponent } from './routes/overview/monthly-planner/monthly-planner.component';
+import { YearlyPlannerComponent } from './routes/overview/yearly-planner/yearly-planner.component';
 //
 import { TransactionComponent } from './routes/transaction/transaction.component';
 
@@ -31,10 +31,10 @@ export const routes: Routes = [
 	},
 	{
 		path: 'overview', component: OverviewComponent, children: [
-			{ path: 'month', component: MonthTableComponent },
+			{ path: 'month', component: MonthlyPlannerComponent },
 			{
-				path: 'year', component: YearTableComponent, children: [
-				{ path: 'month', component: MonthTableComponent },
+				path: 'year', component: YearlyPlannerComponent, children: [
+				{ path: 'month', component: MonthlyPlannerComponent },
 				]
 			},
 		]

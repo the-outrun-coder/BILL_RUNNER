@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { YearTableComponent } from './year-table.component';
+import { YearlyPlannerComponent } from './yearly-planner.component';
 
-describe('YearTableComponent', () => {
-  let component: YearTableComponent;
-  let fixture: ComponentFixture<YearTableComponent>;
+describe('YearlyPlannerComponent', () => {
+  let component: YearlyPlannerComponent;
+  let fixture: ComponentFixture<YearlyPlannerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [YearTableComponent]
+      imports: [YearlyPlannerComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(YearTableComponent);
+    fixture = TestBed.createComponent(YearlyPlannerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
