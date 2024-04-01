@@ -9,10 +9,22 @@ import { CalendarManagerService } from '../../../services/calendar-manager.servi
   styleUrl: './calendar-grid.component.scss'
 })
 export class CalendarGridComponent {
+	private dayList!: Array<any>;
 
 	constructor(private CalManager: CalendarManagerService) { }
 
+	private populateCalendarFrom(currentDay: any): void {
+		this.dayList = this.CalManager.getCalendarViewFor(currentDay);
+		// this.dayList = this.CalManager.getCalendarViewForPreviousMonth(currentDay);
+		// this.dayList = this.CalManager.getCalendarViewForNextMonth(currentDay);
+		// this.dayList = this.CalManager.getCalendarViewForOffsetMonth(currentDay, -10);
+		console.log('>> The list of Days:', this.dayList);
+	}
+
 	ngOnInit(): void {
-		console.log(`>> TODAY IS: ${this.CalManager.getToday()}`);
+		const today = this.CalManager.getToday();
+		console.log(`>> TODAY IS: ${today}`);
+
+		this.populateCalendarFrom(today)
 	}
 }
