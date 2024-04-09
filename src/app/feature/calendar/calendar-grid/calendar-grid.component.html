@@ -1,7 +1,11 @@
 <div class="calendar-grid flex-1 grid grid-cols-7 grid-rows-5">
-	@for (day of formatedCalendar; track $index) {
-		<div class="border border-gray-200 flex flex-col">
-			Week: {{$index + 1}}
+	@for (week of formatedCalendar; track $index) {
+		<div class="calendar-row">
+      @for (day of week; track $index) {
+        <brun-calendar-day
+          [day]="day"
+        ></brun-calendar-day>
+      }
 		</div>
 	}
 </div>

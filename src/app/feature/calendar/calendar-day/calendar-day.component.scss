@@ -1,0 +1,11 @@
+:host {
+  border: 1px solid rgb(218, 218, 218);
+  width: 14.3%;
+
+  .day-number {
+    // border: 1px solid red;
+    width: 100%;
+    text-align: center;
+    padding-top: 3px;
+  }
+}

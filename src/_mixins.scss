@@ -1,0 +1,8 @@
+@mixin app-window-height {
+  height: calc(100vh - 130px);
+}
+
+@mixin app-window {
+  @include app-window-height();
+  display: block;
+}

@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { CalendarManagerService } from '../../../services/calendar-manager.service';
+import { CalendarDayComponent } from '../calendar-day/calendar-day.component';
 
 const DAYS_PER_WEEK = 7;
 
 @Component({
   selector: 'brun-calendar-grid',
   standalone: true,
-  imports: [],
+  imports: [
+    CalendarDayComponent
+  ],
   templateUrl: './calendar-grid.component.html',
   styleUrl: './calendar-grid.component.scss'
 })
