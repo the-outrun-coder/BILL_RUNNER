@@ -50,5 +50,11 @@ export class CalendarGridComponent {
 		console.log(`>> TODAY IS: ${today}`);
 
 		this.populateCalendarFrom(today)
-	}
+  }
+  
+  public handleDaySelection(e: any, day: any) {
+    console.log('>> DAY WAS SELECTED:');
+    console.log(e);
+    console.log(day);
+  }
 }

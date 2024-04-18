@@ -2,9 +2,9 @@
 	@for (week of formatedCalendar; track $index) {
 		<div class="calendar-row">
       @for (day of week; track $index) {
-        <brun-calendar-day
+        <button brun-calendar-day (click)="handleDaySelection($event, day)"
           [day]="day"
-        ></brun-calendar-day>
+        ></button>
       }
 		</div>
 	}

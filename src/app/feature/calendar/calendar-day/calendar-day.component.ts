@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { getDate, isToday } from 'date-fns';
 
 @Component({
-  selector: 'brun-calendar-day',
+  selector: 'button[brun-calendar-day]',
   standalone: true,
   imports: [
     NgClass
