@@ -15,6 +15,7 @@ const DAYS_PER_WEEK = 7;
 })
 export class CalendarGridComponent {
 	private dayList!: Array<any>;
+	public weekDayNames!: Array<string>;
 	public formatedCalendar!: Array<any>;
 
 	constructor(private CalManager: CalendarManagerService) { }
@@ -49,6 +50,7 @@ export class CalendarGridComponent {
 		const today = this.CalManager.getToday();
 		console.log(`>> TODAY IS: ${today}`);
 
+		this.weekDayNames = this.CalManager.WEEKDAYS_NAMES;
 		this.populateCalendarFrom(today)
   }
   

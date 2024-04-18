@@ -15,5 +15,16 @@
     display: flex;
     flex-grow: 1;
     height: 20%;
+
+    &.labels {
+      height: 30px;
+    }
+  }
+
+  .weekday-name {
+    @include calendar-day-block;
+    border-bottom: none;
+    align-items: center;
+    justify-content: center;
   }
 }

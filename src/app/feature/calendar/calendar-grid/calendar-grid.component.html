@@ -1,4 +1,11 @@
 <div class="calendar-grid flex-1 grid grid-cols-7 grid-rows-5">
+
+  <div class="calendar-row labels">
+    @for (weekDay of weekDayNames; track $index) {
+      <div class="weekday-name">{{weekDay}}</div>
+    }
+  </div>
+
 	@for (week of formatedCalendar; track $index) {
 		<div class="calendar-row">
       @for (day of week; track $index) {

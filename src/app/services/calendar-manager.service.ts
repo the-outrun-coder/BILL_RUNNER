@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { addMonths, eachDayOfInterval, endOfMonth, getDay, startOfMonth, subMonths } from 'date-fns';
 
-export const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
 @Injectable({
   providedIn: 'root'
 })
 export class CalendarManagerService {
+	public WEEKDAYS_NAMES: Array<string> = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 	private today: any; // TODO - SOME DATE OBJECT
 
 	constructor() {

@@ -1,3 +1,4 @@
+// LAYOUT
 @mixin app-window-height {
   height: calc(100vh - 130px);
 }
@@ -5,4 +6,14 @@
 @mixin app-window {
   @include app-window-height();
   display: block;
+}
+
+// CALENDAR
+@mixin calendar-day-block {
+  border: 1px solid rgb(218, 218, 218);
+  border-top: none;
+  border-left: none;
+  width: 14.3%;
+  padding: 0;
+  display: flex;
 }

@@ -1,8 +1,8 @@
+@import "../../../../_mixins";
+
 :host {
-  border: 1px solid rgb(218, 218, 218);
-  width: 14.3%;
-  padding: 0;
-  display: flex;
+  @include calendar-day-block;
+  background-color: #fff;
 
   .day-number {
     // border: 1px solid red;
@@ -16,6 +16,15 @@
       color: #fff;
     }
 
+  }
+
+  &:first-child {
+    // border-left: 3px solid red;
+    border-left: none;
+  }
+  &:last-child {
+    // border-right: 3px solid red;
+    border-right: none;
   }
 }
 
