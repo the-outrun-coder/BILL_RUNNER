@@ -1,5 +1,27 @@
 # BILLRUNNER
 
+## TODO
+### Resource Management
+- Event manager
+- Transaction manager
+- Session manager
+- account manager
+- notes manager
+
+### Feature interface
+- Bill plotter
+  - Yearly
+  - monthly
+- Manage Resource
+  - Event
+  - Trx
+  - account
+  - session
+  - note
+- TRX register
+- Account register
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
 ## Development server
