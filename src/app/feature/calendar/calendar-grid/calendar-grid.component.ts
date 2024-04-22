@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { CalendarManagerService } from '../../../services/calendar-manager.service';
 import { CalendarDayComponent } from '../calendar-day/calendar-day.component';
+import {
+  MatDialog,
+} from '@angular/material/dialog';
+import { DayModInterfaceComponent } from '../day-mod-interface/day-mod-interface.component';
 
 const DAYS_PER_WEEK = 7;
 
@@ -18,7 +22,7 @@ export class CalendarGridComponent {
 	public weekDayNames!: Array<string>;
 	public formatedCalendar!: Array<any>;
 
-	constructor(private CalManager: CalendarManagerService) { }
+	constructor(private CalManager: CalendarManagerService, public dialog: MatDialog) { }
 
 	private splitDaysIntoWeeks() {
 		return this.dayList.reduce((intoWeeks, day, index) => {
@@ -56,7 +60,11 @@ export class CalendarGridComponent {
   
   public handleDaySelection(e: any, day: any) {
     console.log('>> DAY WAS SELECTED:');
-    console.log(e);
-    console.log(day);
+    // console.log(e);
+		console.log(day);
+		
+		const eventModDialog = this.dialog.open(DayModInterfaceComponent, {
+			data: { date: day }
+		});
   }
 }
