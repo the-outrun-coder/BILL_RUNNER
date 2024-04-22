@@ -1,0 +1,64 @@
+# Event entity management
+
+## Working with Google Cal API
+[Integrate Google Calendar API With Angular | Google Calendar Javascript API](https://www.youtube.com/watch?v=pYmOl12ndYs)
+
+- Appointment Scheduler example
+- Overview of official docs
+- Enable the API
+- to the developer console
+- Create a project
+- Configure OAuth
+- setup Oauth consent screen
+- Add oath compliance links
+- Optional Developer contact info
+- setup scopes
+- Test user setup and limitations
+- Authorize creds for web app
+  - to console
+  - create cred
+  - OAuth client ID
+    - app type: Web App
+    - Name: ???
+    - authorized origins
+      - https://localhost
+    - authorized redirect URIs
+    - Review OAuth deets
+- Create an API Key
+- Edit API key
+  - Modify restrictions
+- Confirm OAuth client IDs created
+- In Source: 
+  - Start the Google Auth Client
+    - inject scripts
+  - Create submission form
+    - import into components
+    - Create fields and labels
+    - Add form submit action handler
+    - UI components
+    - implement GAPI callbacks
+      - gapiLoaded()
+      - gisLoaded()
+      - ENV VARS
+        - CLIENT_ID
+        - API_KEY
+        - DISCOVERY_DOC
+        - SCOPES
+        - API endpoint designation
+      - load Callback setup
+      - createGoogleEvent() callback
+      - scheduelEvent() callback
+        - define the event object <---<< !!!
+          - summary
+          - location
+          - description
+          - start
+          - end
+          - recurrence
+          - attendees
+          - reminders
+          - setup request handler
+  - Publish app on Google Console
+  - event submission timezone formattion and formatting
+    - startTime
+    - endTime

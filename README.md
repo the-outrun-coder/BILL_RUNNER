@@ -3,10 +3,15 @@
 ## TODO
 ### Resource Management
 - Event manager
-- Transaction manager
+  - look into GCP calendar dev
+    - for event gen
+    - calendar reminders
+    - session schedueling
+    - bill duedates
 - Session manager
-- account manager
 - notes manager
+- Transaction manager
+- account manager
 
 ### Feature interface
 - Bill plotter
